@@ -1,0 +1,142 @@
+---
+---
+<div class="quiz-container" id="genome">
+    <div class="quiz-step active" data-step="1">
+        <span class="eyebrow">STEP 01/03</span>
+        <h2>ENVIRONMENTAL EXPOSURE</h2>
+        <p>Where does your skin spend most of its time?</p>
+        <div class="quiz-options">
+            <button class="quiz-opt" data-value="urban">URBAN CORE (High HEV & Pollutants)</button>
+            <button class="quiz-opt" data-value="balanced">SUBURBAN / BALANCED</button>
+            <button class="quiz-opt" data-value="nature">COASTAL / NATURE (High UV)</button>
+        </div>
+    </div>
+
+    <div class="quiz-step" data-step="2">
+        <span class="eyebrow">STEP 02/03</span>
+        <h2>PRIMARY BIOLOGICAL CONCERN</h2>
+        <p>Which cellular pathway requires the most optimization?</p>
+        <div class="quiz-options">
+            <button class="quiz-opt" data-value="resilience">BARRIER RESILIENCE</button>
+            <button class="quiz-opt" data-value="repair">DNA / CELLULAR REPAIR</button>
+            <button class="quiz-opt" data-value="glow">MITOCHONDRIAL GLOW</button>
+        </div>
+    </div>
+
+    <div class="quiz-step" data-step="3">
+        <span class="eyebrow">STEP 03/03</span>
+        <h2>RITUAL PREFERENCE</h2>
+        <p>How do you prefer to bio-hack your routine?</p>
+        <div class="quiz-options">
+            <button class="quiz-opt" data-value="minimal">THE PURIST (2-3 Steps)</button>
+            <button class="quiz-opt" data-value="optimized">THE OPTIMIZER (5+ Steps)</button>
+        </div>
+    </div>
+
+    <div class="quiz-result" style="display: none;">
+        <span class="eyebrow">YOUR GENOME PROFILE</span>
+        <h2 id="result-title">CATALYST OPTIMIZED</h2>
+        <p id="result-desc">Your skin requires high-potency exosome repair to combat urban oxidative stress.</p>
+        <button class="cta-button primary" onclick="location.reload()">RESTART ANALYSIS</button>
+    </div>
+</div>
+
+<style>
+    .quiz-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 6rem 2rem;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 20px;
+        text-align: center;
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .quiz-step {
+        display: none;
+    }
+
+    .quiz-step.active {
+        display: block;
+        animation: fadeIn 0.8s ease-out;
+    }
+
+    .quiz-options {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 3rem;
+    }
+
+    .quiz-opt {
+        padding: 1.5rem;
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: #fff;
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        border-radius: 4px;
+    }
+
+    .quiz-opt:hover {
+        border-color: var(--accent-color);
+        background: rgba(212, 175, 55, 0.05);
+        transform: translateY(-2px);
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
+<script>
+    const steps = document.querySelectorAll('.quiz-step');
+    const opts = document.querySelectorAll('.quiz-opt');
+    const resultDiv = document.querySelector('.quiz-result');
+    const resultTitle = document.getElementById('result-title');
+    const resultDesc = document.getElementById('result-desc');
+
+    let currentStep = 1;
+    let answers = {};
+
+    opts.forEach(opt => {
+        opt.addEventListener('click', () => {
+            const step = opt.closest('.quiz-step');
+            const stepNum = parseInt(step.dataset.step);
+            
+            // Collect answer (simplified logic)
+            answers[stepNum] = opt.dataset.value;
+
+            if (stepNum < steps.length) {
+                step.classList.remove('active');
+                steps[stepNum].classList.add('active');
+                currentStep++;
+            } else {
+                showResult();
+            }
+        });
+    });
+
+    function showResult() {
+        steps.forEach(s => s.classList.remove('active'));
+        resultDiv.style.display = 'block';
+        resultDiv.classList.add('fadeIn');
+
+        // Simple scoring
+        if (answers[1] === 'urban') {
+            resultTitle.innerText = "EXO-SHIELD PROTOCOL";
+            resultDesc.innerText = "Priority focus on high-fidelity barrier repair and HEV light neutralization.";
+        } else {
+            resultTitle.innerText = "CIRCADIAN OPTIMIZATION";
+            resultDesc.innerText = "Aligning your skin's biological clock for deep nocturnal cellular repair.";
+        }
+    }
+</script>

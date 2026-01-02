@@ -2,11 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap');
 
 :root {
-    --bg-color: #080808;
+    --bg-color: #0A0A0A;
+    /* Obsidian Black */
     --text-color: #f5f5f5;
-    --accent-color: #d49a00;
-    --accent-glow: rgba(212, 154, 0, 0.4);
+    --accent-color: #D4AF37;
+    /* Catalyst Amber */
+    --accent-glow: rgba(212, 175, 55, 0.4);
     --secondary-color: #888888;
+    --chrome-color: #3A3A3A;
+    /* Smoked Chrome */
     --glass-bg: rgba(255, 255, 255, 0.03);
     --glass-border: rgba(255, 255, 255, 0.08);
     --primary-font: 'Outfit', sans-serif;

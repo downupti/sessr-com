@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Logo from '../components/Logo.astro';
+import Quiz from '../components/Quiz.astro';
 ---
 
 <Layout title="SESSR | Premium Cellular Longevity & Bio-tech Skincare">
@@ -25,8 +26,8 @@ import Logo from '../components/Logo.astro';
         <section class="hero" id="home">
             <div class="hero-content">
                 <span class="eyebrow">BIO-TECH INNOVATION</span>
-                <h1>BIOENGINEERED<br><span class="italic">LUMINOSITY.</span></h1>
-                <p>Clinically perfected skincare through advanced genomic science and exosome delivery systems.</p>
+                <h1>THE FUTURE OF SKIN,<br><span class="italic">PRESERVED.</span></h1>
+                <p>Clinically perfected longevity through advanced genomic science and EXO-TECH™ delivery systems.</p>
                 <div class="hero-actions">
                     <button class="cta-button primary">SHOP THE COLLECTION</button>
                     <button class="cta-button secondary">THE SCIENCE</button>
@@ -126,6 +127,15 @@ import Logo from '../components/Logo.astro';
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section class="genome-quiz">
+            <div class="section-header center">
+                <span class="eyebrow">DIAGNOSTIC ANALYSIS</span>
+                <h2>THE SKIN GENOME</h2>
+                <p style="color: var(--secondary-color); max-width: 600px; margin: 0 auto 4rem;">Identify the precise cellular needs of your skin with our proprietary diagnostic algorithm.</p>
+            </div>
+            <Quiz />
         </section>
     </main>
 
