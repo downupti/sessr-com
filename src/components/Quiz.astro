@@ -37,7 +37,10 @@
         <span class="eyebrow">YOUR GENOME PROFILE</span>
         <h2 id="result-title">CATALYST OPTIMIZED</h2>
         <p id="result-desc">Your skin requires high-potency exosome repair to combat urban oxidative stress.</p>
-        <button class="cta-button primary" onclick="location.reload()">RESTART ANALYSIS</button>
+        <div class="quiz-result-actions">
+            <button class="cta-button primary">SHOP THE COLLECTION</button>
+            <button class="cta-button secondary" onclick="location.reload()">RESTART ANALYSIS</button>
+        </div>
     </div>
 </div>
 
@@ -130,13 +133,31 @@
         resultDiv.style.display = 'block';
         resultDiv.classList.add('fadeIn');
 
-        // Simple scoring
-        if (answers[1] === 'urban') {
+        let recomId = 'catalyst-serum';
+        let recomName = 'THE CATALYST';
+
+        // Scoring logic
+        if (answers[1] === 'urban' || answers[2] === 'resilience') {
             resultTitle.innerText = "EXO-SHIELD PROTOCOL";
-            resultDesc.innerText = "Priority focus on high-fidelity barrier repair and HEV light neutralization.";
+            resultDesc.innerText = "Your environment requires high-fidelity barrier repair and HEV light neutralization. We recommend starting with Blue Light Defense.";
+            recomId = 'blue-light-defense';
+            recomName = 'BLUE LIGHT DEFENSE';
+        } else if (answers[2] === 'repair') {
+            resultTitle.innerText = "EPIGENETIC OPTIMIZATION";
+            resultDesc.innerText = "Your skin profile indicates a need for deep cellular repair and SIRT1 activation. The Catalyst is your primary serum.";
+            recomId = 'catalyst-serum';
+            recomName = 'THE CATALYST';
         } else {
-            resultTitle.innerText = "CIRCADIAN OPTIMIZATION";
-            resultDesc.innerText = "Aligning your skin's biological clock for deep nocturnal cellular repair.";
+            resultTitle.innerText = "CIRCADIAN ALIGNMENT";
+            resultDesc.innerText = "Your bio-rhythms suggest a focus on nocturnal regeneration. Circadian Night Oil will optimize your cellular sleep cycle.";
+            recomId = 'circadian-night-oil';
+            recomName = 'CIRCADIAN NIGHT OIL';
+        }
+
+        const actionBtn = resultDiv.querySelector('.cta-button.primary');
+        if (actionBtn) {
+            actionBtn.innerHTML = `SHOP ${recomName}`;
+            actionBtn.setAttribute('onclick', `location.href='/product/${recomId}'`);
         }
     }
 </script>
