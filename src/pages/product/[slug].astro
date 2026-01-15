@@ -7,23 +7,6 @@ import AddToCart from '../../components/AddToCart.astro';
 export async function getStaticPaths() {
   const products = [
     {
-      slug: 'catalyst-serum',
-      name: 'THE CATALYST',
-      tagline: 'Biological Reprogramming & Epigenetic Optimization',
-      price: 320,
-      id: 'catalyst-serum',
-      image: '/assets/SERUM_amber.png',
-      colorClass: 'amber',
-      target: 'Redirection of cellular energy toward DNA repair pathways; 40% increase in SIRT1 expression over 28 days.',
-      foundation: [
-        '15% EXO-PEPTIDE™ Matrix: Bio-mimetic peptides encapsulated in lab-synthesized exosomes.',
-        'Phyto-SIRT1 Activators: Resveratrol and NMN precursors to restabilize mitochondrial function.',
-        'Cross-Linked Hyaluronate-3: Immediate structural plumping and prolonged hydration.'
-      ],
-      ritual: 'A cooling, silk-like amber concentrate that disappears instantly. Designed as the first step after cleansing to prime the genome for subsequent treatments.',
-      packaging: '30ml UV-resistant Amber Glass housed in a weighted titanium-finish flacon.'
-    },
-    {
       slug: 'blue-light-defense',
       name: 'BLUE LIGHT DEFENSE',
       tagline: 'The Environmental Resilience Shield',
@@ -39,23 +22,6 @@ export async function getStaticPaths() {
       ],
       ritual: 'A non-greasy, whipped suspension that creates a matte, "second-skin" finish. Essential for the high-performance professional.',
       packaging: '50ml heavy-walled, nitrogen-flushed airless pump.'
-    },
-    {
-      slug: 'circadian-night-oil',
-      name: 'CIRCADIAN NIGHT OIL',
-      tagline: 'The Genetic Sync Protocol',
-      price: 240,
-      id: 'circadian-night-oil',
-      image: '/assets/OIL_frosted.png',
-      colorClass: 'frosted',
-      target: 'Restoration of the skin\'s nocturnal repair cycle; increase in ATP production during the delta-sleep phase.',
-      foundation: [
-        'Viatmin A-Bakuchiol Hybrid: Accelerates cell turnover without inflammatory response.',
-        'Melatonin-Signal Peptides: Activate nocturnally-dominant repair genes.',
-        'Bio-Lipid Complex (Ceramides 1, 3, 6-II): Skin-identical ratio of lipids to reconstruct acid mantle.'
-      ],
-      ritual: 'A dense, velvet-gold oil that anchors the evening routine. Natural scent of Sea Buckthorn promotes a physiological shift toward rest.',
-      packaging: '30ml thick-walled frosted glass with a precision-weighted pipette.'
     }
   ];
 
@@ -156,20 +122,17 @@ const { product } = Astro.props;
                 <div class="logo">
                      <a href="/" style="text-decoration: none; color: inherit;"><Logo height="50px" /></a>
                 </div>
-                <p>The Future of Skin, Preserved.</p>
+                <p>Only here you can find real SESSR.</p>
             </div>
             <div class="footer-links">
                 <div class="link-group">
-                    <h4>SHOP</h4>
-                    <a href="/product/catalyst-serum">The Catalyst</a>
+                    <h4>PRODUCT</h4>
                     <a href="/product/blue-light-defense">Blue Light Defense</a>
-                    <a href="/product/circadian-night-oil">Circadian Night Oil</a>
                 </div>
                 <div class="link-group">
-                    <h4>ABOUT</h4>
-                    <a href="#">Our Story</a>
-                    <a href="#">Clinical Trials</a>
-                    <a href="#">Careers</a>
+                    <h4>THE BRAND</h4>
+                    <a href="#">Our 1973 Story</a>
+                    <a href="#">HEV Science</a>
                 </div>
             </div>
         </div>

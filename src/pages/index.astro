@@ -26,11 +26,11 @@ import AddToCart from '../components/AddToCart.astro';
     <main>
         <section class="hero" id="home">
             <div class="hero-content">
-                <span class="eyebrow">BIO-TECH INNOVATION</span>
-                <h1>THE FUTURE OF SKIN,<br><span class="italic">PRESERVED.</span></h1>
-                <p>Clinically perfected longevity through advanced genomic science and EXO-TECH™ delivery systems.</p>
+                <span class="eyebrow">MOLECULAR PROTECTION SINCE 1973</span>
+                <h1>THE SHIELD FOR<br><span class="italic">DIGITAL LIVES.</span></h1>
+                <p>We’ve been the silent innovators behind world-class brands since 1973. Now, we bring you the ultimate protector against the blue light age.</p>
                 <div class="hero-actions">
-                    <button class="cta-button primary">SHOP THE COLLECTION</button>
+                    <button class="cta-button primary">GET THE SHIELD</button>
                     <button class="cta-button secondary">THE SCIENCE</button>
                 </div>
             </div>
@@ -55,13 +55,11 @@ import AddToCart from '../components/AddToCart.astro';
             </div>
             <div class="science-grid">
                 <div class="science-content">
-                    <p>Our proprietary exosome-based delivery system increases ingredient absorption by 300%. Unlike
-                        traditional skincare that sits on the surface, EXO-TECH™ mimics the skin's natural communication
-                        vesicles.</p>
+                    <p>Our proprietary exosome-based delivery system increases ingredient absorption by 300%. Designed specifically to protect female facial skin from the significant aging caused by smartphone and laptop blue light.</p>
                     <ul class="science-bullets">
-                        <li>Deep Cellular Repair</li>
-                        <li>SIRT1 Gene Activation</li>
-                        <li>Mitochondrial Support</li>
+                        <li>HEV Light Neutralization</li>
+                        <li>Digital Aging Prevention</li>
+                        <li>Lipid Barrier Reinforcement</li>
                     </ul>
                 </div>
                 <div class="science-visual">
@@ -76,44 +74,21 @@ import AddToCart from '../components/AddToCart.astro';
 
         <section class="collection" id="shop">
             <div class="section-header center">
-                <span class="eyebrow">THE COLLECTION</span>
-                <h2>FOUNDATIONAL REPAIR</h2>
+                <span class="eyebrow">THE SIGNATURE MODEL</span>
+                <h2>BLUE LIGHT DEFENSE</h2>
             </div>
-            <div class="product-grid">
-                <!-- Catalyst Serum -->
-                <div class="product-card">
-                    <a href="/product/catalyst-serum" class="product-link">
-                        <div class="product-image">
-                            <div class="bottle amber"></div>
-                        </div>
-                    </a>
-                    <div class="product-info">
-                        <span class="tag">BEST SELLER</span>
-                        <a href="/product/catalyst-serum"><h3>THE CATALYST</h3></a>
-                        <p>Exosome-encapsulated peptide complex for 24-hour cellular repair.</p>
-                        <div class="product-footer">
-                            <span class="price">$320.00</span>
-                            <AddToCart 
-                                id="catalyst-serum" 
-                                name="THE CATALYST" 
-                                price={320} 
-                                image="/assets/SERUM_amber.png"
-                            />
-                        </div>
-                    </div>
-                </div>
-
+            <div class="product-grid" style="display: flex; justify-content: center;">
                 <!-- Blue Light Defense -->
-                <div class="product-card">
+                <div class="product-card" style="max-width: 400px;">
                     <a href="/product/blue-light-defense" class="product-link">
                         <div class="product-image">
                             <div class="bottle chrome"></div>
                         </div>
                     </a>
                     <div class="product-info">
-                        <span class="tag">PROTECT</span>
+                        <span class="tag">THE ORIGINAL</span>
                         <a href="/product/blue-light-defense"><h3>BLUE LIGHT DEFENSE</h3></a>
-                        <p>Digital shield neutralizing oxidative stress from high-energy visible light.</p>
+                        <p>A specialized skin moisturizer protector against the blue light from laptops and smartphones.</p>
                         <div class="product-footer">
                             <span class="price">$180.00</span>
                             <AddToCart 
@@ -121,29 +96,6 @@ import AddToCart from '../components/AddToCart.astro';
                                 name="BLUE LIGHT DEFENSE" 
                                 price={180} 
                                 image="/assets/CREAM_chrome.png"
-                            />
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Circadian Night Oil -->
-                <div class="product-card">
-                    <a href="/product/circadian-night-oil" class="product-link">
-                        <div class="product-image">
-                            <div class="bottle frosted"></div>
-                        </div>
-                    </a>
-                    <div class="product-info">
-                        <span class="tag">REPAIR</span>
-                        <a href="/product/circadian-night-oil"><h3>CIRCADIAN NIGHT OIL</h3></a>
-                        <p>Synchronize repair cycles with melatonin derivatives and bio-lipids.</p>
-                        <div class="product-footer">
-                            <span class="price">$240.00</span>
-                            <AddToCart 
-                                id="circadian-night-oil" 
-                                name="CIRCADIAN NIGHT OIL" 
-                                price={240} 
-                                image="/assets/OIL_frosted.png"
                             />
                         </div>
                     </div>
@@ -167,20 +119,17 @@ import AddToCart from '../components/AddToCart.astro';
                 <div class="logo">
                     <Logo height="50px" />
                 </div>
-                <p>The Future of Skin, Preserved.</p>
+                <p>Only here you can find real SESSR.</p>
             </div>
             <div class="footer-links">
                 <div class="link-group">
-                    <h4>SHOP</h4>
-                    <a href="#">Serums</a>
-                    <a href="#">Moisturizers</a>
-                    <a href="#">Kits</a>
+                    <h4>PRODUCT</h4>
+                    <a href="/product/blue-light-defense">Blue Light Defense</a>
                 </div>
                 <div class="link-group">
-                    <h4>ABOUT</h4>
-                    <a href="#">Our Story</a>
-                    <a href="#">Clinical Trials</a>
-                    <a href="#">Careers</a>
+                    <h4>THE BRAND</h4>
+                    <a href="#">Our 1973 Story</a>
+                    <a href="#">HEV Science</a>
                 </div>
             </div>
         </div>
